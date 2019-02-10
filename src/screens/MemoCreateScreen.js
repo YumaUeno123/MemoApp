@@ -33,6 +33,8 @@ class MemoCreateScreen extends React.Component {
           multiline
           value={this.state.body}
           onChangeText={(text) => { this.setState({ body: text }); }}
+          autoCapitalize="none"
+          autoCorrect={false}
         />
         <CircleButton name="check" onPress={this.handleSubmit.bind(this)} />
       </View>
