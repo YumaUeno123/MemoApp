@@ -11,7 +11,7 @@ class SignupScreen extends React.Component {
   handleSubmit() {
     firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
       .then((user) => {
-        this.props.navigation.navigate('Home');
+        this.props.navigation.navigate('Home', { currentUser: user });
       })
       .catch((error) => {
         console.log(error);
@@ -33,7 +33,7 @@ class SignupScreen extends React.Component {
         <TextInput
           style={styles.input}
           value={this.state.password}
-          onChangeText={(text) => {this.setState({ password: text }); }}
+          onChangeText={(text) => { this.setState({ password: text }); }}
           placeholder="Password"
           autoCapitalize="none"
           autoCorrect={false}
