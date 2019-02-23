@@ -34,6 +34,7 @@ class MemoCreateScreen extends React.Component {
           onChangeText={(text) => { this.setState({ body: text }); }}
           autoCapitalize="none"
           autoCorrect={false}
+          textAlignVertical="top"
         />
         <CircleButton name="check" onPress={this.handleSubmit.bind(this)} />
       </View>

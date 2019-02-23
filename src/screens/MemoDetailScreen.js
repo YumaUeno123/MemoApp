@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   editButton: {
-    top: 75,
+    top: 68,
   },
 });
 
